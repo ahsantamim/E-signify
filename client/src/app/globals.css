@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --button-color: #1c4cf0; /* Added custom button color bg-[var(--button-color)] */
+  --button-hover-color: #0e41e9;
+  --button-login-color: #5000f7;
+  --button-login-hover-color: #3f06c5;
+}
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "DS Indigo", DSIndigo, Helvetica, Arial, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* globals.css or a relevant CSS module */
+.sign {
+  font-family: cursive;
+  font-size: 24px;
+  color: #fff; /* White color */
+  text-align: center;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  transform: skew(-15deg); /* Adjust the angle as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Disable the default scrollbar on the outer container */
+.main-container {
+  overflow: hidden;
+  height: 100vh; /* Ensures the container is full-screen height */
+}
+
+/* Ensure the inner container can scroll with custom scrollbar */
+.scrollable-content {
+  overflow-y: auto; /* Allows vertical scrolling */
+  height: 100%; /* Ensure it takes full height within the main container */
+}
